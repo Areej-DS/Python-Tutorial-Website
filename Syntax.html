@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Syntax Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="JS/index.js"></script>
+    <style>
+
+        h1 {
+            margin: 10px 0; /* هوامش حول العنوان */
+        }
+
+        h2 {
+            color: #2c3e50; /* لون العناوين الفرعية */
+            margin-top: 20px; /* مسافة علوية للعناوين */
+        }
+
+        .custom-list {
+            padding: 0; /* إزالة الحشوة الافتراضية */
+            text-align:right ; /* توسيط القائمة */
+        }
+
+    .custom-list li {
+    display: block; /* عرض العناصر في سطر جديد */
+    margin: 10px 0; /* مسافة عمودية بين العناصر */
+    text-align:right ; /* توسيط النص داخل العناصر */
+}
+
+        .custom-list a {
+           text-decoration: underline ; /* إزالة التسطير */
+            color: #E6E6FA; /* لون الروابط */
+            padding: 5px; /* إضافة حشوة */
+            border: 1px solid transparent; /* إضافة حدود شفافة */
+            transition: border 0.3s; /* تأثير التحويل */
+        }
+
+        .custom-list a:hover {
+            text-decoration: none; /* إضافة تسطير عند التمرير */
+            border: 1px solid #2c3e50; /* إضافة حدود عند التمرير */
+        }
+
+        pre {
+            background-color: #DCDCDC; /* خلفية رمادية خفيفة للكود */
+            padding: 10px; /* حشوة داخلية */
+            border-radius: 5px; /* زوايا مستديرة */
+            overflow: auto; /* إضافة شريط تمرير إذا لزم الأمر */
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="python.gif" alt="Python Logo" class="python-logo">
+        <a href="home.html"><h1 >Welcome to Python</h1></a>
+        <div class="buttons">
+            <div class="dropdown">
+                <button class="dropbtn">Learn Python
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Syntax.html">Python Syntax</a>
+                    <a href="Variables.html">Variables</a>
+                    <a href="data_types.html">Data Types</a>
+                    <a href="lists.html">Lists</a>
+                    <a href="loops.html">For Loops</a>
+                    <a href="functions.html">Functions</a>
+                    <a href="array2.html">Arrays</a>
+                </div>
+            </div>
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="top-title">The Python Syntax </h1>
+        <section id="introduction">
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/x7X9w_GIm1s?si=lfTjn3HbvjNGgrv2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            <div class="video-container">
+                <iframe 
+                src="https://www.youtube.com/embed/x7X9w_GIm1s?si=lfTjn3HbvjNGgrv2" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                frameborder="0" 
+                >
+            </iframe>
+        </div>
+        <div class="top-contents">
+           <h2>Page Contents</h2>
+        <div class="contents">
+            <a href="#itroduction"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+              </svg>Introduction to Python</a>
+            <a href="#variables">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                    <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+                  </svg>Python Variables</a>
+            <a href="#comments"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                    <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+                  </svg>Comments</a>
+        </div>
+
+        </div>
+        <h2 id="itroduction">Introduction to Python</h2>
+            <p>Indentation refers to the spaces at the beginning of a line of code. While in other programming languages, indentation is used solely for readability, indentation in Python holds great significance.</p>
+            <pre><code>
+if 5 > 2:
+  print("Five is greater than two!")    
+            </code></pre>
+        </section>
+
+        <section id="variables"> 
+            <h2>Python Variables</h2>
+            <p>In Python, variables are created when you assign a value to it:</p>
+            <pre><code>
+x = 5
+y = "Hello, World!"
+            </code></pre>
+        </section>
+
+        <section id="comments">
+            <h2>Comments</h2>
+            <p>Python has commenting capability for the purpose of in-code documentation. Comments start with a #, and Python will render the rest of the line as a comment:</p>
+            <pre><code>
+#This is a comment.
+print("Hello, World!")
+            </code></pre>
+        </section>
+    </main>
+
+<footer>
+    <a href="https://www.w3schools.com/" target="_blank"><p class="copyright">© 2023 All Rights Reserved</p></a>  
+  </footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+    <title>Python Variables Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .custom-list {
+            list-style-type: none; /* No bullet points */
+            padding: 0; /* Remove padding */
+            text-align: right ; /* Align links to the left */
+            margin-top: 10px; /* Add some margin to the top */
+        }
+
+        .custom-list li {
+            margin-bottom: 10px; /* Space between items */
+        }
+
+        .custom-list a {
+            color: #E6E6FA; /* White links */
+            text-decoration: underline; /* Underline links */
+        }
+
+        .custom-list a:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
+        h2 {
+            color: #2c3e50;; /* Dark blue for section titles */
+        }
+        pre {
+            background-color: #DCDCDC; /* خلفية رمادية خفيفة للكود */
+            padding: 10px; /* حشوة داخلية */
+            border-radius: 5px; /* زوايا مستديرة */
+            overflow: auto; /* إضافة شريط تمرير إذا لزم الأمر */
+        }
+        code {
+            font-family: monospace; /* Monospace font for code */
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="python.gif" alt="Python Logo" class="python-logo">
+        <a href="home.html"><h1 >Welcome to Python</h1></a>
+        <div class="buttons">
+            <div class="dropdown">
+                <button class="dropbtn">Learn Python
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Syntax.html">Python Syntax</a>
+                    <a href="Variables.html">Variables</a>
+                    <a href="data_types.html">Data Types</a>
+                    <a href="lists.html">Lists</a>
+                    <a href="loops.html">For Loops</a>
+                    <a href="functions.html">Functions</a>
+                    <a href="array2.html">Arrays</a>
+                </div>
+            </div>
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="top-title">The Python Variables </h1>
+        <div class="video-container">
+            <iframe 
+            src="https://www.youtube.com/embed/x7X9w_GIm1s?si=lfTjn3HbvjNGgrv2" 
+                    alt ="Python Variables"
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            frameborder="0" 
+            >
+        </iframe></div>
+        <div class="top-contents">
+            <h2>Page Contents</h2>
+         <div class="contents">
+             <a href="#casting"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                 <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+        </svg>Creating Variables</a>
+        <a href="#variables">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+            </svg>Casting</a>
+            <a href="#get-the-type"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+            </svg>Get the Type</a> 
+            <a href="#case-sensitive"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+                </svg>Case Sensitive</a>
+         </div>
+ 
+         </div>
+        <section id="creating">
+            <h2>Creating Variables</h2>
+            <p>Python has no command for declaring a variable. A variable is created the moment you first assign a value to it.</p>
+            <pre><code>
+x = 5
+y = "John"
+print(x)
+print(y)
+            </code></pre>
+        </section>
+
+        <section id="casting"> 
+            <h2>Casting</h2>
+            <p>If you want to specify the data type of a variable, this can be done with casting.</p>
+            <pre><code>
+x = str(3)    # x will be '3'
+y = int(3)    # y will be 3
+z = float(3)  # z will be 3.0
+            </code></pre>
+        </section>
+
+        <section id="get-the-type">
+            <h2>Get the Type</h2>
+            <p>You can get the data type of a variable with the <code>type()</code> function.</p>
+            <pre><code>
+x = 5
+y = "John"
+print(type(x))
+print(type(y))
+            </code></pre>
+        </section>
+
+        <section id="case-sensitive">
+            <h2>Case-Sensitive</h2>
+            <p>Variable names are case-sensitive.</p>
+            <pre><code>
+a = 4
+A = "Sally"
+
+print(a)
+print(A)
+# A will not overwrite a
+            </code></pre>
+        </section>
+    </main>
+
+<footer>
+    <a href="https://www.w3schools.com/" target="_blank"><p class="copyright">© 2023 All Rights Reserved</p></a>  
+  </footer>
+</body>
+</html>
+

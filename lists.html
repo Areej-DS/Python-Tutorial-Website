@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Understanding Python Lists</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .example {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0; /* لإضافة مسافة بين الأمثلة */
+        }
+        pre {
+            background-color:#DCDCDC; 
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em; 
+            color: #333;
+            border: 1px solid #ddd; 
+        }
+        /* إعدادات العناصر في القائمة */
+        #list {
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 800px; /* تحديد عرض القسم */
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .list-item {
+            background: #3498db;
+            color:white;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: calc(70% - 22px); /* تحديد العرض مع الأخذ في الاعتبار الهوامش */
+            margin-right: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #2c3e50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2c3e50; /* لون الخلفية عند التمرير */
+        }
+
+      
+    </style>
+</head>
+<body>
+    <header>
+        <img src="python.gif" alt="Python Logo" class="python-logo">
+        <a href="home.html"><h1 >Welcome to Python</h1></a>
+        <div class="buttons">
+            <div class="dropdown">
+                <button class="dropbtn">Learn Python
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Syntax.html">Python Syntax</a>
+                    <a href="Variables.html">Variables</a>
+                    <a href="data_types.html">Data Types</a>
+                    <a href="lists.html">Lists</a>
+                    <a href="loops.html">For Loops</a>
+                    <a href="functions.html">Functions</a>
+                    <a href="array2.html">Arrays</a>
+                </div>
+            </div>
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+    </header>
+    <main>
+    <h1 class="top-title">The Lists python </h1>
+    <div class="top-contents">
+        <h2>Page Contents</h2>
+     <div class="contents">
+         <a href="#basic"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+             <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+    </svg>Basic List Syntax</a>
+    <a href="#Operations">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+            <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+        </svg>Common List Operations</a>
+        <a href="#Methods"> 
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+            <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+        </svg>Common List Methods</a> 
+        <a href="#Features"> 
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+            <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+            </svg>Advanced List Features</a>
+     </div>
+     </div>
+<section>
+    <h2  id="basic">Basic List Syntax</h2>
+      <p>You can create a list by placing elements inside square brackets <code>[]</code>, separated by commas:</p>
+      <div class="example">
+          <pre><code>my_list = [1, 2, 3, "Python", [4, 5]]</code></pre>
+      </div>
+  </section>
+  
+  <section>
+      <h2 id="Operations">Common List Operations</h2>
+      <h3> 1. Accessing List Elements</h3>
+      <p>List elements are indexed starting from <code>0</code>. You can access individual elements using the index:</p>
+      <div class="example">
+          <pre><code>my_list = ['a', 'b', 'c', 'd']
+  print(my_list[0])  # Output: 'a'</code></pre>
+      </div>
+  
+      <h3>2. List Slicing</h3>
+      <p>You can access a portion of the list using slicing:</p>
+      <div class="example">
+          <pre><code>my_list = [1, 2, 3, 4, 5]
+  print(my_list[1:4])  # Output: [2, 3, 4]</code></pre>
+      </div>
+  
+      <h3>3. Modifying Lists</h3>
+      <p>Since lists are mutable, you can change an element at a specific index:</p>
+      <div class="example">
+          <pre><code>my_list = [10, 20, 30, 40]
+  my_list[2] = 100
+  print(my_list)  # Output: [10, 20, 100, 40]</code></pre>
+      </div>
+  </section>
+  
+  <section>
+      <h2 id="Methods">Common List Methods</h2>
+      
+      <h3>1. Appending Elements</h3>
+      <p>You can add elements to the end of a list using the <code>append()</code> method:</p>
+      <div class="example">
+          <pre><code>my_list = [1, 2, 3]
+  my_list.append(4)
+  print(my_list)  # Output: [1, 2, 3, 4]</code></pre>
+      </div>
+  
+      <h3>2. Inserting Elements</h3>
+      <p>The <code>insert()</code> method allows you to add an element at a specific position:</p>
+      <div class="example">
+          <pre><code>my_list = [1, 2, 3]
+  my_list.insert(1, 100)
+  print(my_list)  # Output: [1, 100, 2, 3]</code></pre>
+      </div>
+  
+      <h3>3. Removing Elements</h3>
+      <p>You can remove elements from a list using <code>remove()</code> or <code>pop()</code>. The <code>remove()</code> method removes the first occurrence of a value, while <code>pop()</code> removes an element at a specified index (or the last element by default).</p>
+      <div class="example">
+          <pre><code>my_list = [1, 2, 3, 2]
+  my_list.remove(2)
+  print(my_list)  # Output: [1, 3, 2]
+  
+  my_list.pop(1)
+  print(my_list)  # Output: [1, 2]</code></pre>
+      </div>
+  
+      <h3>4. List Length</h3>
+      <p>Use the <code>len()</code> function to get the number of elements in a list:</p>
+      <div class="example">
+          <pre><code>my_list = [10, 20, 30]
+  print(len(my_list))  # Output: 3</code></pre>
+      </div>
+  
+      <h3>5. Sorting a List</h3>
+      <p>You can sort a list in place using the <code>sort()</code> method:</p>
+      <div class="example">
+          <pre><code>my_list = [3, 1, 2]
+  my_list.sort()
+  print(my_list)  # Output: [1, 2, 3]</code></pre>
+      </div>
+  
+      <h3>6. Reversing a List</h3>
+      <p>The <code>reverse()</code> method reverses the elements of the list in place:</p>
+      <div class="example">
+          <pre><code>my_list = [1, 2, 3]
+  my_list.reverse()
+  print(my_list)  # Output: [3, 2, 1]</code></pre>
+      </div>
+  </section>
+  
+  <section>
+      <h2 id="Features">Advanced List Features</h2>
+      
+      <h3>1. List Comprehensions</h3>
+      <p>List comprehensions provide a concise way to create lists. They consist of brackets containing an expression followed by a for clause:</p>
+      <div class="example">
+          <pre><code>squares = [x**2 for x in range(5)]
+  print(squares)  # Output: [0, 1, 4, 9, 16]</code></pre>
+      </div>
+  
+      <h3>2. Nesting Lists</h3>
+      <p>Lists can contain other lists, enabling you to create complex data structures:</p>
+      <div class="example">
+          <pre><code>nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+  print(nested_list[1][2])  # Output: 6</code></pre>
+      </div>
+  </section>
+  
+  <h2>Python List Visualization</h2>
+  <div id="list">
+      <!-- سيتم عرض عناصر قائمة بايثون هنا -->
+  </div>
+  
+  <div>
+      <input type="text" id="newItem" placeholder="Add new item to list">
+      <button onclick="addItem()">Append</button>
+      <button onclick="removeLast()">Pop</button>
+  </div>
+  
+    </main>
+<script>
+    // تهيئة "قائمة على طراز بايثون" في JavaScript
+    let pyList = [1, 2, 3, 4, 5];
+
+    // وظيفة لعرض القائمة على الصفحة
+    function renderList() {
+        const listContainer = document.getElementById('list');
+        listContainer.innerHTML = ''; // مسح القائمة السابقة
+
+        pyList.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'list-item';
+            div.innerHTML = item;
+            listContainer.appendChild(div);
+        });
+    }
+
+    // إضافة عنصر إلى القائمة (معادل لدالة append() في بايثون)
+    function addItem() {
+        const newItem = document.getElementById('newItem').value;
+        if (newItem !== '') {
+            pyList.push(newItem); // إضافة عنصر جديد إلى القائمة
+            renderList(); // إعادة عرض القائمة
+            document.getElementById('newItem').value = ''; // مسح الإدخال
+        }
+    }
+
+    // إزالة العنصر الأخير من القائمة (معادل لدالة pop() في بايثون)
+    function removeLast() {
+        pyList.pop(); // إزالة العنصر الأخير من القائمة
+        renderList(); // إعادة عرض القائمة
+    }
+
+    // عرض القائمة في البداية
+    renderList();
+</script>
+
+<footer>
+    <a href="https://www.w3schools.com/" target="_blank"><p class="copyright">© 2023 All Rights Reserved</p></a>  
+  </footer>
+
+</body>
+</html>
+

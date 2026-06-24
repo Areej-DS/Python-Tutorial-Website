@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Python Functions</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        pre {
+            background-color:#DCDCDC; 
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em; 
+            color: #333;
+            border: 1px solid #ddd; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="python.gif" alt="Python Logo" class="python-logo">
+        <a href="home.html"><h1 >Welcome to Python</h1></a>
+        <div class="buttons">
+            <div class="dropdown">
+                <button class="dropbtn">Learn Python
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Syntax.html">Python Syntax</a>
+                    <a href="Variables.html">Variables</a>
+                    <a href="data_types.html">Data Types</a>
+                    <a href="lists.html">Lists</a>
+                    <a href="loops.html">For Loops</a>
+                    <a href="functions.html">Functions</a>
+                    <a href="array2.html">Arrays</a>
+                </div>
+            </div>
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+    </header>
+<main>
+    <h1 class="top-title">The Functions python </h1>
+    <div class="top-contents">
+        <h2>Page Contents</h2>
+     <div class="contents">
+         <a href="#Numbers"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+             <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+           </svg>Working with Numbers in Python        </a>
+         <a href="#string">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                 <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+               </svg> Working with Strings in Python</a>
+         <a href="#lists"> 
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                 <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+               </svg>Working with Lists in Python</a>
+               <a href="#tuples"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                    <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+                  </svg>Working with Tuples in Python</a>
+
+     </div>
+
+     </div>
+    <h2 class="top-title" id="Numbers">Working with Numbers in Python </h2>
+    <h3 >1. abs() - Absolute Value</h3>
+    <p>Returns the absolute value of a number.</p>
+    <pre>
+# Example: abs()
+number = -15
+print(abs(number))  # Output: 15
+    </pre>
+
+    <h3 >2. pow() - Power</h3>
+    <p>Raises a number to a power.</p>
+    <pre>
+# Example: pow()
+print(pow(2, 3))  # Output: 8
+    </pre>
+
+    <h3 >3. sum() - Sum</h3>
+    <p>Returns the sum of all items in an iterable.</p>
+    <pre>
+# Example: sum()
+print(sum([1, 2, 3, 4]))  # Output: 10
+    </pre>
+
+    <h2 id="strings">Working with Strings in Python</h2>
+    <h3>1. upper() - Convert to Uppercase</h3>
+    <p>Converts a string to uppercase letters.</p>
+    <pre>
+# Example: upper()
+text = "hello"
+print(text.upper())  # Output: HELLO
+    </pre>
+
+    <h3>2. lower() - Convert to Lowercase</h3>
+    <p>Converts a string to lowercase letters.</p>
+    <pre>
+# Example: lower()
+text = "HELLO"
+print(text.lower())  # Output: hello
+    </pre>
+
+    <h3>3. replace() - Replace Substring</h3>
+    <p>Replaces parts of a string with another string.</p>
+    <pre>
+# Example: replace()
+text = "I love Python"
+new_text = text.replace("love", "like")
+print(new_text)  # Output: I like Python
+    </pre>
+
+    <h3>4. split() - Split String</h3>
+    <p>Splits a string into a list based on a delimiter.</p>
+    <pre>
+# Example: split()
+text = "apple,banana,cherry"
+fruits = text.split(",")
+print(fruits)  # Output: ['apple', 'banana', 'cherry']
+    </pre>
+
+    <h2 id="lists">Working with Lists in Python</h2>
+    <h3>1. append() - Add to a List</h3>
+    <p>Adds an element to the end of a list.</p>
+    <pre>
+# Example: append()
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)  # Output: [1, 2, 3, 4]
+    </pre>
+
+    <h3>2. remove() - Remove from a List</h3>
+    <p>Removes the first occurrence of an element from a list.</p>
+    <pre>
+# Example: remove()
+my_list = [1, 2, 3, 4]
+my_list.remove(2)
+print(my_list)  # Output: [1, 3, 4]
+    </pre>
+
+    <h3>3. count() - Count Occurrences</h3>
+    <p>Returns the number of occurrences of a specified value in the list.</p>
+    <pre>
+# Example: count()
+numbers = [1, 2, 3, 2, 1]
+print(numbers.count(2))  # Output: 2
+    </pre>
+
+    <h2 id="tuples">Working with Tuples in Python</h2>
+    <h3>1. tuple() - Create a Tuple</h3>
+    <p>Converts a list into a tuple.</p>
+    <pre>
+# Example: tuple()
+my_list = [1, 2, 3]
+my_tuple = tuple(my_list)
+print(my_tuple)  # Output: (1, 2, 3)
+    </pre>
+
+    <h3>2. min() and max() - Min and Max Values in Tuple</h3>
+    <p>Returns the smallest or largest value from a tuple.</p>
+    <pre>
+# Example: min() and max()
+my_tuple = (5, 10, 3, 8, 15)
+print(min(my_tuple))  # Output: 3
+print(max(my_tuple))  # Output: 15
+    </pre>
+
+    <h3>3. sorted() - Sort a Tuple</h3>
+    <p>Returns a sorted list from the elements of a tuple.</p>
+    <pre>
+# Example: sorted()
+my_tuple = (3, 1, 4, 2)
+sorted_tuple = sorted(my_tuple)
+print(sorted_tuple)  # Output: [1, 2, 3, 4]
+    </pre>
+</main>
+<footer>
+    <a href="https://www.w3schools.com/" target="_blank"><p class="copyright">© 2023 All Rights Reserved</p></a>  
+  </footer>
+
+
+</body>
+</html>

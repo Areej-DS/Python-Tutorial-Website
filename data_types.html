@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Data Types</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* إعدادات الجدول */
+        table {
+            width: 100%; /* عرض الجدول بالكامل */
+            border-collapse: collapse; /* دمج الحدود */
+            margin: 0; /* إزالة الهوامش للجدول */
+            background-color: #fff; /* خلفية بيضاء للجدول */
+            border-radius: 8px; /* زوايا مستديرة للجدول */
+            overflow: hidden; /* للتخلص من الحواف المتراكبة */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للجدول */
+        }
+
+        table, th, td {
+            border: 1px solid #ddd; /* حدود فاتحة لخلايا الجدول */
+        }
+
+        th, td {
+            padding: 15px; /* زيادة التباعد في الخلايا */
+            text-align: left; /* محاذاة النص إلى اليسار */
+        }
+
+        th {
+            background-color: #2c3e50; /* لون داكن لرأس الجدول */
+            color: #E6E6FA; /* لون نص فاتح في رأس الجدول */
+            font-weight: bold; /* جعل الخط عريض */
+        }
+
+        /* إعدادات الشيفرات */
+        pre {
+            background-color:#DCDCDC; /* خلفية رمادية خفيفة للكود */
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em; /* حجم نص أصغر قليلاً */
+            color: #333; /* لون النص داخل الكود */
+            border: 1px solid #ddd; /* حدود فاتحة لمنطقة الكود */
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="python.gif" alt="Python Logo" class="python-logo">
+        <a href="home.html"><h1 >Welcome to Python</h1></a>
+        <div class="buttons">
+            <div class="dropdown">
+                <button class="dropbtn">Learn Python
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Syntax.html">Python Syntax</a>
+                    <a href="Variables.html">Variables</a>
+                    <a href="data_types.html">Data Types</a>
+                    <a href="lists.html">Lists</a>
+                    <a href="loops.html">For Loops</a>
+                    <a href="functions.html">Functions</a>
+                    <a href="array2.html">Arrays</a>
+                </div>
+            </div>
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+    </header>
+
+<main class="container">
+
+    <h1 class="top-title">The Python Data Types </h1>
+
+    <table>
+        <tr>
+            <th>Data Type</th>
+            <th>Description & Example</th>
+        </tr>
+        <tr>
+            <td>String</td>
+            <td>A string is a sequence of characters. In Python, strings are enclosed in quotes.
+                <pre># Example
+my_string = "Hello World!"</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Integer</td>
+            <td>An integer is a whole number without a fractional part.
+                <pre># Example
+my_integer = 7</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Float</td>
+            <td>A float is a number with a decimal point or in exponential form.
+                <pre># Example
+my_float = 9.49</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>List</td>
+            <td>A list is an ordered collection of items that can be of different types.
+                <pre># Example
+my_list = [10, 20, 30, "apple", 40.5]</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Dictionary</td>
+            <td>A dictionary is a collection of key-value pairs.
+                <pre># Example
+my_dict = {
+    "name": "Areej",
+    "age": 20,
+    "city": "Makkah"
+}</pre>
+            </td>
+        </tr>
+    </table>
+</main>
+<footer>
+    <a href="https://www.w3schools.com/" target="_blank"><p class="copyright">© 2023 All Rights Reserved</p></a>  
+  </footer>
+
+</body>
+</html>

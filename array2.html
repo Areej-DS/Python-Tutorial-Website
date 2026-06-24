@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<head>
+    <title>Learning Arrays in Python</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        pre {
+            background-color: #DCDCDC;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0; /* لإضافة مسافة بين الأمثلة */
+        }
+
+      
+    </style>
+</head>
+<body>
+    <header>
+        <img src="python.gif" alt="Python Logo" class="python-logo">
+        <a href="home.html"><h1 >Welcome to Python</h1></a>
+        <div class="buttons">
+            <div class="dropdown">
+                <button class="dropbtn">Learn Python
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Syntax.html">Python Syntax</a>
+                    <a href="Variables.html">Variables</a>
+                    <a href="data_types.html">Data Types</a>
+                    <a href="lists.html">Lists</a>
+                    <a href="loops.html">For Loops</a>
+                    <a href="functions.html">Functions</a>
+                    <a href="array2.html">Arrays</a>
+                </div>
+            </div>
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+    </header>
+
+<main class="container">
+    <h1 class="top-title">The Python Arrays </h1>
+    <div class="top-contents">
+        <h2>Page Contents</h2>
+     <div class="contents">
+         <a href="#itroduction"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+             <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+    </svg>Introduction to Arrays</a>
+    <a href="#array2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+            <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+        </svg>Using the array Module</a>
+        <a href="#commontypes"> 
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+            <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+        </svg>Common Types</a> 
+            <a href="#NumPy"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+            <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+            </svg> Using NumPy Arrays        </a>
+            <a href="#Manipulation"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+            <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+            </svg>Array Manipulation</a>
+
+            <a href="#Examples"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+                </svg>Practical Examples</a>
+                <a href="#Summary"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                    <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+                    </svg>Summary</a>
+     </div>
+
+     </div>
+    <h2 id="itroduction">1. Introduction to Arrays</h2>
+    <p>
+        An array is a data structure that can hold multiple values of the same type. 
+        In Python, while you can use lists as arrays, you can also use the <code>array</code> module or the <code>numpy</code> library for more efficient numerical operations.
+    </p>
+
+    <h2 id="array2">2. Using the <code>array</code> Module</h2>
+    <h3>Creating an Array</h3>
+    <pre><code>import array
+
+# Create an array of integers
+arr = array.array('i', [1, 2, 3, 4, 5])
+print(arr)</code></pre>
+
+    <h2 id="commontypes">Common Types</h2>
+    <ul>
+        <li><code>'i'</code>: Signed integer</li>
+        <li><code>'f'</code>: Float</li>
+        <li><code>'d'</code>: Double</li>
+    </ul>
+
+    <h2 >Accessing Elements</h2>
+    <pre><code>print(arr[0])  # Access first element</code></pre>
+
+    <h3>Array Operations</h3>
+    <pre><code># Append
+arr.append(6)
+
+# Insert
+arr.insert(2, 10)  # Insert 10 at index 2
+
+# Remove
+arr.remove(3)  # Remove first occurrence of 3
+
+# Slice
+print(arr[1:4])  # Get elements from index 1 to 3
+
+# Length
+print(len(arr))</code></pre>
+
+    <h2 id="NumPy">3. Using NumPy Arrays</h2>
+    <h3>Installation</h3>
+    <pre><code>pip install numpy</code></pre>
+
+    <h3>Creating NumPy Arrays</h3>
+    <pre><code>import numpy as np
+
+# Create a 1D array
+arr_1d = np.array([1, 2, 3, 4, 5])
+print(arr_1d)
+
+# Create a 2D array (matrix)
+arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
+print(arr_2d)</code></pre>
+
+    <h3>Common Array Operations</h3>
+    <pre><code># Shape
+print(arr_2d.shape)
+
+# Indexing
+print(arr_2d[0, 1])  # Access element in first row, second column
+
+# Slicing
+print(arr_2d[0, :])  # Get first row
+print(arr_2d[:, 1])  # Get second column</code></pre>
+
+    <h2 id="Manipulation">4. Array Manipulation</h2>
+    <pre><code># Reshape
+arr_reshaped = arr_1d.reshape((5, 1))
+
+# Flatten
+arr_flat = arr_2d.flatten()
+
+# Concatenation
+arr_concatenated = np.concatenate((arr_1d, arr_1d))
+
+# Mathematical Operations
+arr_sum = arr_1d + 2  # Add 2 to each element
+arr_product = arr_1d * 2  # Multiply each element by 2</code></pre>
+
+    <h2 id="Examples">5. Practical Examples</h2>
+    <h3>Example 1: Basic Statistics</h3>
+    <pre><code>data = np.array([10, 20, 30, 40, 50])
+
+mean = np.mean(data)
+median = np.median(data)
+std_dev = np.std(data)
+
+print(f"Mean: {mean}, Median: {median}, Standard Deviation: {std_dev}")</code></pre>
+
+    <h3>Example 2: Matrix Operations</h3>
+    <pre><code>A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+# Matrix addition
+C = A + B
+
+# Matrix multiplication
+D = np.dot(A, B)
+
+print("Matrix C:\n", C)
+print("Matrix D:\n", D)</code></pre>
+
+    <h2 id="Summary">6. Summary</h2>
+    <p>
+        Arrays in Python can be created using the built-in <code>array</code> module or with NumPy for more advanced features. 
+        NumPy provides powerful capabilities for array manipulation, mathematical operations, and working with multi-dimensional data.
+    </p>
+
+    <h2>Additional Resources</h2>
+    <ul>
+        <li><a href="https://docs.python.org/3/library/array.html">Python Array Module Documentation</a></li>
+        <li><a href="https://numpy.org/doc/stable/">NumPy Documentation</a></li>
+    </ul>
+</main>
+
+<footer>
+    <a href="https://www.w3schools.com/" target="_blank"><p class="copyright">© 2023 All Rights Reserved</p></a>  
+  </footer>
+</body>
+</html>
+
